@@ -1,0 +1,3 @@
+[run]
+source = shop_toys
+omit = shop_toys/test*
