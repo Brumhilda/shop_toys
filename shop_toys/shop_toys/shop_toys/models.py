@@ -3,10 +3,10 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, backref, relationship
 import os
 
-if os.path.exists("avtograf.db"):
-    os.remove("avtograf.db")
+if os.path.exists("shop_base.db"):
+    os.remove("shop_base.db")
 
-engine = create_engine('sqlite:///avtograf.db', encoding='utf-8')
+engine = create_engine('sqlite:///shop_base.db', encoding='utf-8')
 Session = sessionmaker()
 Base = declarative_base(bind=engine)
 
@@ -83,4 +83,5 @@ class manufactures(Base):
 
      def __repr__(self):
           return self.mName+ " " +str(self.id)
+
 
